@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 12, 2023 at 07:55 PM
+-- Generation Time: Jan 15, 2023 at 03:56 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -34,6 +34,11 @@ CREATE TABLE `user` (
   `email` varchar(128) NOT NULL,
   `image` varchar(128) NOT NULL,
   `password` varchar(256) NOT NULL,
+  `tgl_lahir` date DEFAULT NULL,
+  `tempat_lahir` varchar(128) NOT NULL,
+  `github_link` varchar(256) NOT NULL,
+  `fb_link` varchar(256) NOT NULL,
+  `ig_link` varchar(256) NOT NULL,
   `role_id` int(11) NOT NULL,
   `is_active` int(1) NOT NULL,
   `date_created` int(11) NOT NULL
@@ -43,9 +48,11 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `username`, `email`, `image`, `password`, `role_id`, `is_active`, `date_created`) VALUES
-(12, 'Raie Aswajjillah', 'Admin', 'rai010303@gmail.com', 'default.png', '$2y$10$uZRqcMG0sffklkPlNP1E5eX9baU.edz3b34flEq7tVV9fnakUG9aq', 1, 1, 1673548914),
-(13, 'Ridwan', 'Ridwan123', 'ridwan123@gmail.com', 'default.png', '$2y$10$YGzl1zTfvlOphG6br6s..Ox/ngtrLrzvj2rlRJi7H7.NMIUKTt/0W', 2, 1, 1673549380);
+INSERT INTO `user` (`id`, `name`, `username`, `email`, `image`, `password`, `tgl_lahir`, `tempat_lahir`, `github_link`, `fb_link`, `ig_link`, `role_id`, `is_active`, `date_created`) VALUES
+(12, 'Raie Aswajjillah', 'Admin', 'rai010303@gmail.com', 'pas_poto3.png', '$2y$10$uZRqcMG0sffklkPlNP1E5eX9baU.edz3b34flEq7tVV9fnakUG9aq', '2003-03-01', 'Bandung', 'https://github.com/RaiA133', 'https://www.facebook.com/rai.aswajjillah/', 'https://www.instagram.com/rai___a/', 1, 1, 1673548914),
+(16, 'Raie Aswajjillah', 'R41iee', 'raiaswajjillah@gmail.com', 'pas_poto.png', '$2y$10$8UHIbo4EGD6OptVpnoHEu.HF8C/T9Uww6k0U10wqtyqlW8RILLCp6', '2023-01-03', 'Bandung', 'https://github.com/RaiA133', 'https://www.facebook.com/rai.aswajjillah/', 'https://www.instagram.com/rai___a/', 2, 1, 1673610189),
+(18, 'ari e', 'ariiiiii11', 'ari123@gmail.com', 'default.png', '$2y$10$vlxv2oBbJ.NMyWqrvdKdZ.BjO8sBFmlqOlbnMXB/p06vqE43iXHGi', NULL, '', '', '', '', 2, 1, 1673706645),
+(26, 'asd123', 'asd123', 'asd123@gmail.com', 'pp22.jpg', '$2y$10$3tYw9Yz1T1sAQVfs61N3au3iiGZN8Tb5zCRSCVLe9HyKzzp/V4ek2', '2023-01-03', 'bandung', 'https://github.com/RaiA133', 'https://www.facebook.com/rai.aswajjillah/', 'https://www.youtube.com/', 2, 1, 1673811720);
 
 -- --------------------------------------------------------
 
@@ -172,7 +179,7 @@ ALTER TABLE `user_sub_menu`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `user_access_menu`
