@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@splinetool/runtime": "^0.9.176",
+    "atropos": "^1.0.2",
+    "hamburgers": "^1.2.1",
+    "mdb-ui-kit": "^6.1.0"
+  }
+}
